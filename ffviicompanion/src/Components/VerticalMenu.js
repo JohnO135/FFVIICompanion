@@ -1,9 +1,9 @@
 import React from 'react'
-import {menuItems} from './MainMenuData'
+import { menuItems } from './MainMenuData';
 
-export default function Menu() {
+export default function VerticalMenu(menuitems) {
   return (
-    <div className='box main-menu section'>
+    <div className='box vertical-menu'>
         {menuItems.map((val, key) => {
           return (
             <div 

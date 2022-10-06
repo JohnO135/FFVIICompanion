@@ -1,7 +1,9 @@
 import React from 'react'
+import VerticalMenu from './VerticalMenu'
 
 export default function Viewer() {
   return (
-    <div className='viewer section'></div>
+    <div className='viewer box'>
+    </div>
   )
 }
