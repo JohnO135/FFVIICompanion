@@ -1,8 +1,14 @@
 import React from 'react';
-import Map from './Map';
+import Menu from './Components/MainMenu';
+import "./App.css";
+import Viewer from './Components/Viewer';
+
 function App() {
   return (
-    <Map/>
+    <div className="app grid-container">
+      <Viewer/>
+      <Menu/>
+    </div>
   );
 }
 
