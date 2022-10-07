@@ -1,20 +1,23 @@
-import React from 'react'
-import { menuItems } from './MainMenuData';
+import React, { Component } from 'react'
 
-export default function VerticalMenu(menuitems) {
-  return (
-    <div className='box vertical-menu'>
-        {menuItems.map((val, key) => {
-          return (
-            <div 
-              key={key}
-              onClick={() => {window.alert("Menu working")}}
-              className="menu-item"
-            >
-                {val.text}
-            </div>
-          );
-        })}
-    </div>
-  )
+class VerticalMenu extends Component {
+  render() {
+    return (
+      <div className='box vertical-menu'>
+          {this.props.menuItems.map((val, key) => {
+            return (
+              <div 
+                key={key}
+                onClick={() => {console.log("working")}}
+                className="menu-item"
+              >
+                  {val.text}
+              </div>
+            );
+          })}
+      </div>
+    )
+  };
 }
+
+export default VerticalMenu;
