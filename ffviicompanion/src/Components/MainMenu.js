@@ -1,17 +1,30 @@
 import React from 'react'
-import {menuItems} from './MainMenuData'
+import { Link } from 'react-router-dom';
+
+var menuItems = [
+    {
+        text: "Beastiary",
+        link: "/Beastiary"
+    },
+    {
+        text: "Town Guide",
+        link: "/TownGuide"
+    },
+    {
+        text: "Materia",
+        link: "/Materia"
+    }
+];
 
 export default function Menu() {
   return (
     <div className='box main-menu section'>
-        {menuItems.map((val, key) => {
+        { menuItems.map((val, key) => {
           return (
             <div 
               key={key}
-              onClick={() => {window.alert("Menu working")}}
-              className="menu-item"
             >
-                {val.text}
+                <Link to= {val.link} className="menu-item">{val.text}</Link>
             </div>
           );
         })}
